@@ -70,33 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    // Hi all today we are going to make a online product selling app.
-    // basically its a cosmatic selling app.
-    // The design is very coll and something new from traditional design.
-    // But before getting started lets make sure to subscribe and hit
-    // the bell icon to get latest update and notified enerytime i post a new video.
-    // so lets get started
-    // lets app some font and import some image assets
-    // Now we will setup a recyclerview for product category list.
-    // now we will ad a model class for our category
-    // lets create a adapter class for data model
-    // Our adapter class is ready Now we will setup recyclerview
-    //now we will add some data to our model class
-    // Lets run and see
-    // so we have setup category recycler.
-    // Now in a same way we create a another recycycler view for products
-    // first we make model class then adapter
-    // product recycler also setup.
-    // now we will setup on clicklistener on products and navigate to details activity.
-    // lets do this.
-    // before going to details page we need cart button in home page and some layout setup.
-    // Now its perfect
-    // lets move to the details activity.
-    // so lets add some animation in this.
-    // So this tutorial has been completed if you love my work plz like share and subscribe
-    // and dont forget to comments
-    // see you in the next video
-
+    
 
 
 }
