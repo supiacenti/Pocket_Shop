@@ -42,25 +42,24 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     @Override
     public void onBindViewHolder(@NonNull final ProductViewHolder holder, int position) {
-
-        holder.prodImage.setImageResource(productsList.get(position).getImageUrl());
-        holder.prodName.setText(productsList.get(position).getProductName());
-        holder.prodQty.setText(productsList.get(position).getProductQty());
-        holder.prodPrice.setText(productsList.get(position).getProductPrice());
+        final Products product = productsList.get(position);
+        holder.prodImage.setImageResource(product.getImageUrl());
+        holder.prodName.setText(product.getProductName());
+        holder.prodQty.setText(product.getProductQty());
+        holder.prodPrice.setText(product.getProductPrice());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context, Productdetails.class);
-/*
-                Pair[] pairs = new Pair[1];
-                pairs[0] = new Pair<View, String>(holder.prodImage, "image");
-                ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation((Activity) context, pairs);
-               */ context.startActivity(i/*, activityOptions.toBundle()*/);
+                i.putExtra("PRODUCT_ID", product.getProductid());
+                i.putExtra("PRODUCT_NAME", product.getProductName());
+                i.putExtra("PRODUCT_QTY", product.getProductQty());
+                i.putExtra("PRODUCT_PRICE", product.getProductPrice());
+                i.putExtra("PRODUCT_IMAGE", product.getImageUrl());
+                context.startActivity(i);
             }
         });
-
-
     }
 
     @Override

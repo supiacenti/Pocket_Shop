@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.rajendra.onlineproductsapp.adapter.ProductAdapter;
@@ -14,10 +16,9 @@ import com.rajendra.onlineproductsapp.model.Products;
 
 import java.util.ArrayList;
 import java.util.List;
-import android.view.View;
 
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     ProductCategoryAdapter productCategoryAdapter;
     RecyclerView productCatRecycler, prodItemRecycler;
@@ -37,14 +38,23 @@ public class MainActivity extends AppCompatActivity {
         setProductRecycler(productCategoryList);
 
         List<Products> productsList = new ArrayList<>();
-        productsList.add(new Products(1, "Flower Shower", "Spring", "$ 130.00", R.drawable.prod1));
-        productsList.add(new Products(2, "Forever 1", "Spring", "$ 50.00", R.drawable.prod2));
-        productsList.add(new Products(3, "Jelly", "Winter", "$ 78.00", R.drawable.prod3));
-        productsList.add(new Products(4, "Summer Dreams", "Spring", "$ 98.00", R.drawable.prod4));
-        productsList.add(new Products(5, "Blossom", "Winter", "$ 73.00", R.drawable.prod5));
-        productsList.add(new Products(6, "Gummy", "Winter", "$ 210.00", R.drawable.prod6));
+        productsList.add(new Products(1, "Flower Shower", "Spring", "R$ 130.00", R.drawable.prod1));
+        productsList.add(new Products(2, "Forever 1", "Spring", "R$ 50.00", R.drawable.prod2));
+        productsList.add(new Products(3, "Jelly", "Winter", "R$ 78.00", R.drawable.prod3));
+        productsList.add(new Products(4, "Summer Dreams", "Spring", "R$ 98.00", R.drawable.prod4));
+        productsList.add(new Products(5, "Blossom", "Winter", "R$ 73.00", R.drawable.prod5));
+        productsList.add(new Products(6, "Gummy", "Winter", "R$ 210.00", R.drawable.prod6));
 
         setProdItemRecycler(productsList);
+
+        Button button = findViewById(R.id.button); // Substitua 'button' pelo ID real do seu botão
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ShoppingCartActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -67,10 +77,4 @@ public class MainActivity extends AppCompatActivity {
         prodItemRecycler.setAdapter(productAdapter);
 
     }
-
-
-
-    
-
-
 }

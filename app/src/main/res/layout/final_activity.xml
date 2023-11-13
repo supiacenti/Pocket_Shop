@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/confirmationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resumo do Pedido"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/customerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Cliente: "
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/confirmationTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/orderTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Total: "
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/customerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/addressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço de Entrega:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/orderTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/addressDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rua Exemplo, 123\nCidade - Estado\nCEP: 12345-678"
+        app:layout_constraintTop_toBottomOf="@id/addressTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/paymentConfirmationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmação de Pagamento:"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/addressDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/paymentConfirmationDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pagamento confirmado via Cartão de Débito"
+        app:layout_constraintTop_toBottomOf="@id/paymentConfirmationTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/confirmPurchaseButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Compra"
+        app:layout_constraintTop_toBottomOf="@id/paymentConfirmationDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#A1375D"
+        android:indeterminateTintMode="src_in"
+        app:layout_constraintTop_toTopOf="@+id/confirmPurchaseButton"
+        app:layout_constraintBottom_toBottomOf="@+id/confirmPurchaseButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="150dp"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

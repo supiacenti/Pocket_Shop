@@ -148,7 +148,7 @@
             android:fontFamily="@font/rubik_medium"
             android:padding="16dp"
             android:paddingRight="16dp"
-            android:text="Add to Cart (0)"
+            android:text="Adicionar ao Carrinho"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"

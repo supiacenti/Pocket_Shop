@@ -1,0 +1,33 @@
+<?xml version=".0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Título do Carrinho de Compras -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrinho de Compras"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- ListView para listar os itens do carrinho -->
+    <ListView
+        android:id="@+id/listViewShoppingCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="20dp"
+        android:layout_above="@+id/buttonCheckout"/>
+
+    <!-- Botão para finalizar a compra -->
+    <Button
+        android:id="@+id/buttonCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finalizar Compra"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>
